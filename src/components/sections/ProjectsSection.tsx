@@ -14,13 +14,13 @@ export function ProjectsSection() {
   });
 
   return (
-    <section id="projects" className="py-24 px-4 bg-slate-50/50 dark:bg-slate-900/50">
+    <section id="projects" className="py-24 px-4">
       <div className="max-w-6xl mx-auto">
         <FadeIn>
           <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4">
             Featured <GradientText>Projects</GradientText>
           </h2>
-          <p className="text-slate-600 dark:text-slate-400 text-center mb-12 max-w-2xl mx-auto">
+          <p className="text-[var(--ai-text-secondary)] text-center mb-12 max-w-2xl mx-auto">
             Production-ready GenAI and Agentic applications I&apos;ve built
           </p>
         </FadeIn>

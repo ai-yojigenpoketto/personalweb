@@ -35,7 +35,7 @@ export function ContactSection() {
           <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4">
             Get in <GradientText>Touch</GradientText>
           </h2>
-          <p className="text-slate-600 dark:text-slate-400 text-center mb-12 max-w-xl mx-auto">
+          <p className="text-[var(--ai-text-secondary)] text-center mb-12 max-w-xl mx-auto">
             Have a project in mind or want to discuss AI/ML opportunities? Let&apos;s connect!
           </p>
         </FadeIn>
@@ -51,20 +51,20 @@ export function ContactSection() {
                   rel="noopener noreferrer"
                   className={cn(
                     "flex items-center gap-4 p-4 rounded-xl",
-                    "bg-slate-50 dark:bg-slate-800/50",
-                    "text-slate-700 dark:text-slate-300",
-                    "hover:bg-slate-100 dark:hover:bg-slate-700/50",
+                    "bg-[var(--ai-bg-primary)]",
+                    "text-[var(--ai-text-secondary)]",
+                    "hover:bg-[var(--ai-bg-card-hover)]",
                     "transition-colors group"
                   )}
                 >
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-slate-700 to-indigo-600 flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-xl bg-emerald-600 flex items-center justify-center">
                     <link.icon size={24} className="text-white" />
                   </div>
                   <div>
-                    <div className="font-semibold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                    <div className="font-semibold text-[var(--ai-text-primary)] group-hover:text-emerald-400 transition-colors">
                       {link.name}
                     </div>
-                    <div className="text-sm text-slate-500 dark:text-slate-400">
+                    <div className="text-sm text-[var(--ai-text-muted)]">
                       {link.description}
                     </div>
                   </div>
@@ -72,8 +72,8 @@ export function ContactSection() {
               ))}
             </div>
 
-            <div className="mt-8 pt-6 border-t border-slate-200 dark:border-slate-700 text-center">
-              <p className="text-slate-600 dark:text-slate-400 text-sm">
+            <div className="mt-8 pt-6 border-t border-[var(--ai-border)] text-center">
+              <p className="text-[var(--ai-text-muted)] text-sm">
                 Open to discussing new projects, collaborations, or opportunities in GenAI and Agentic systems.
               </p>
             </div>

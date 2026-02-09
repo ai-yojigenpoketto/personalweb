@@ -25,11 +25,11 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
+    <footer className="border-t border-[var(--ai-border)] bg-[#0d0d12]">
       <div className="max-w-6xl mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           {/* Copyright */}
-          <p className="text-sm text-slate-600 dark:text-slate-400">
+          <p className="text-sm text-[var(--ai-text-muted)]">
             {currentYear} Lei Zhou. All rights reserved.
           </p>
 
@@ -43,8 +43,8 @@ export function Footer() {
                 rel="noopener noreferrer"
                 className={cn(
                   "p-2 rounded-full transition-colors",
-                  "text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white",
-                  "hover:bg-slate-100 dark:hover:bg-slate-800"
+                  "text-[var(--ai-text-muted)] hover:text-emerald-400",
+                  "hover:bg-[var(--ai-bg-card)]"
                 )}
                 aria-label={link.name}
               >

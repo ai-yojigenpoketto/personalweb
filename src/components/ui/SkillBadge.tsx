@@ -11,12 +11,12 @@ interface SkillBadgeProps {
 }
 
 const categoryColors: Record<SkillCategory, string> = {
-  "AI/LLM": "from-indigo-700 to-indigo-600",
-  "RAG & Search": "from-slate-700 to-slate-600",
-  "Agentic Systems": "from-violet-700 to-violet-600",
-  "Data & ML": "from-slate-600 to-indigo-600",
-  "Cloud & DevOps": "from-slate-700 to-violet-700",
-  Backend: "from-indigo-600 to-slate-600",
+  "AI/LLM": "bg-[var(--ai-bg-card)] border border-emerald-500/20 text-emerald-400",
+  "RAG & Search": "bg-[var(--ai-bg-card)] border border-emerald-500/20 text-emerald-400",
+  "Agentic Systems": "bg-[var(--ai-bg-card)] border border-emerald-500/20 text-emerald-400",
+  "Data & ML": "bg-[var(--ai-bg-card)] border border-emerald-500/20 text-emerald-400",
+  "Cloud & DevOps": "bg-[var(--ai-bg-card)] border border-emerald-500/20 text-emerald-400",
+  Backend: "bg-[var(--ai-bg-card)] border border-emerald-500/20 text-emerald-400",
 };
 
 export function SkillBadge({ name, category, index }: SkillBadgeProps) {
@@ -29,7 +29,6 @@ export function SkillBadge({ name, category, index }: SkillBadgeProps) {
       whileHover={{ scale: 1.05 }}
       className={cn(
         "inline-flex items-center px-3 py-1.5 rounded-full text-sm font-medium",
-        "bg-gradient-to-r text-white shadow-md",
         categoryColors[category]
       )}
     >

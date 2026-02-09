@@ -22,7 +22,7 @@ export function AboutSection() {
           <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4">
             About <GradientText>Me</GradientText>
           </h2>
-          <p className="text-slate-600 dark:text-slate-400 text-center mb-12 max-w-2xl mx-auto">
+          <p className="text-[var(--ai-text-secondary)] text-center mb-12 max-w-2xl mx-auto">
             A passionate data scientist turning complex AI research into production-ready solutions
           </p>
         </FadeIn>
@@ -32,13 +32,13 @@ export function AboutSection() {
           <FadeIn delay={0.1}>
             <GlassCard className="p-6" hover={false}>
               {/* Location */}
-              <div className="flex items-center gap-2 text-slate-600 dark:text-slate-400 mb-4">
+              <div className="flex items-center gap-2 text-[var(--ai-text-secondary)] mb-4">
                 <MapPin size={18} />
                 <span>{PROFILE.location}</span>
               </div>
 
               {/* Bio */}
-              <p className="text-slate-700 dark:text-slate-300 leading-relaxed mb-6 whitespace-pre-line">
+              <p className="text-[var(--ai-text-secondary)] leading-relaxed mb-6 whitespace-pre-line">
                 {PROFILE.bio}
               </p>
 
@@ -46,10 +46,10 @@ export function AboutSection() {
               <div className="grid grid-cols-3 gap-4 mb-6">
                 {stats.map((stat) => (
                   <div key={stat.label} className="text-center">
-                    <div className="text-2xl font-bold text-slate-900 dark:text-white">
+                    <div className="text-2xl font-bold text-emerald-400">
                       {stat.value}
                     </div>
-                    <div className="text-xs text-slate-500 dark:text-slate-400">
+                    <div className="text-xs text-[var(--ai-text-muted)]">
                       {stat.label}
                     </div>
                   </div>
@@ -72,19 +72,19 @@ export function AboutSection() {
             <FadeIn delay={0.2}>
               <GlassCard className="p-6" hover={false}>
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="p-2 rounded-lg bg-gradient-to-r from-slate-700 to-indigo-600">
+                  <div className="p-2 rounded-lg bg-emerald-600">
                     <Briefcase size={20} className="text-white" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-slate-900 dark:text-white">
+                    <h3 className="font-semibold text-[var(--ai-text-primary)]">
                       Current Role
                     </h3>
-                    <p className="text-sm text-slate-600 dark:text-slate-400">
+                    <p className="text-sm text-[var(--ai-text-secondary)]">
                       AIOps Advisory Researcher
                     </p>
                   </div>
                 </div>
-                <p className="text-slate-600 dark:text-slate-400 text-sm">
+                <p className="text-[var(--ai-text-secondary)] text-sm">
                   At Lenovo, building production GenAI applications and multi-agent systems
                   for enterprise operations.
                 </p>
@@ -95,20 +95,20 @@ export function AboutSection() {
             <FadeIn delay={0.3}>
               <GlassCard className="p-6" hover={false}>
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="p-2 rounded-lg bg-gradient-to-r from-indigo-600 to-violet-600">
+                  <div className="p-2 rounded-lg bg-emerald-600">
                     <GraduationCap size={20} className="text-white" />
                   </div>
-                  <h3 className="font-semibold text-slate-900 dark:text-white">
+                  <h3 className="font-semibold text-[var(--ai-text-primary)]">
                     Education
                   </h3>
                 </div>
                 <div className="space-y-3">
                   {PROFILE.education.map((edu) => (
                     <div key={edu.degree}>
-                      <p className="font-medium text-slate-900 dark:text-white">
+                      <p className="font-medium text-[var(--ai-text-primary)]">
                         {edu.degree}
                       </p>
-                      <p className="text-sm text-slate-600 dark:text-slate-400">
+                      <p className="text-sm text-[var(--ai-text-secondary)]">
                         {edu.school}
                       </p>
                     </div>

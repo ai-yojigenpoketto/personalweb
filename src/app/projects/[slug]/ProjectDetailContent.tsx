@@ -87,9 +87,9 @@ export function ProjectDetailContent({ project }: ProjectDetailContentProps) {
       {/* Hero Section */}
       <section className="relative pt-24 pb-16 px-4 overflow-hidden">
         {/* Background gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 via-transparent to-violet-500/5" />
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-indigo-400/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-violet-400/10 rounded-full blur-3xl" />
+        <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 via-transparent to-emerald-500/5" />
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-emerald-400/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-emerald-500/8 rounded-full blur-3xl" />
 
         <div className="relative max-w-5xl mx-auto">
           {/* Back Button */}
@@ -100,7 +100,7 @@ export function ProjectDetailContent({ project }: ProjectDetailContentProps) {
           >
             <Link
               href="/#projects"
-              className="inline-flex items-center gap-2 text-slate-600 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 transition-colors mb-8"
+              className="inline-flex items-center gap-2 text-[var(--ai-text-muted)] hover:text-emerald-400 transition-colors mb-8"
             >
               <ArrowLeft size={18} />
               Back to Projects
@@ -117,7 +117,7 @@ export function ProjectDetailContent({ project }: ProjectDetailContentProps) {
             {project.featured && (
               <motion.span
                 variants={staggerItem}
-                className="inline-block px-4 py-1.5 text-xs font-medium rounded-full bg-gradient-to-r from-slate-700 to-indigo-600 text-white mb-6"
+                className="inline-block px-4 py-1.5 text-xs font-medium rounded-full bg-emerald-600 text-white mb-6"
               >
                 Featured Project
               </motion.span>
@@ -133,7 +133,7 @@ export function ProjectDetailContent({ project }: ProjectDetailContentProps) {
             {project.tagline && (
               <motion.p
                 variants={staggerItem}
-                className="text-xl sm:text-2xl text-slate-600 dark:text-slate-300 mb-6"
+                className="text-xl sm:text-2xl text-[var(--ai-text-secondary)] mb-6"
               >
                 {project.tagline}
               </motion.p>
@@ -141,7 +141,7 @@ export function ProjectDetailContent({ project }: ProjectDetailContentProps) {
 
             <motion.p
               variants={staggerItem}
-              className="text-lg text-slate-500 dark:text-slate-400 mb-8"
+              className="text-lg text-[var(--ai-text-muted)] mb-8"
             >
               {project.description}
             </motion.p>
@@ -191,15 +191,15 @@ export function ProjectDetailContent({ project }: ProjectDetailContentProps) {
             variants={fadeInUp}
           >
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-100 to-orange-100 dark:from-amber-900/30 dark:to-orange-900/30 flex items-center justify-center">
-                <AlertTriangle className="w-6 h-6 text-amber-600 dark:text-amber-400" />
+              <div className="w-12 h-12 rounded-xl bg-amber-900/30 flex items-center justify-center">
+                <AlertTriangle className="w-6 h-6 text-amber-400" />
               </div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">
+              <h2 className="text-2xl sm:text-3xl font-bold text-[var(--ai-text-primary)]">
                 The Problem
               </h2>
             </div>
             <GlassCard className="p-8" hover={false}>
-              <p className="text-lg text-slate-600 dark:text-slate-300 whitespace-pre-line leading-relaxed">
+              <p className="text-lg text-[var(--ai-text-secondary)] whitespace-pre-line leading-relaxed">
                 {project.problem}
               </p>
             </GlassCard>
@@ -218,10 +218,10 @@ export function ProjectDetailContent({ project }: ProjectDetailContentProps) {
               variants={staggerItem}
               className="flex items-center gap-3 mb-6"
             >
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-100 to-teal-100 dark:from-emerald-900/30 dark:to-teal-900/30 flex items-center justify-center">
-                <Zap className="w-6 h-6 text-emerald-600 dark:text-emerald-400" />
+              <div className="w-12 h-12 rounded-xl bg-emerald-900/30 flex items-center justify-center">
+                <Zap className="w-6 h-6 text-emerald-400" />
               </div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">
+              <h2 className="text-2xl sm:text-3xl font-bold text-[var(--ai-text-primary)]">
                 What You Can Do
               </h2>
             </motion.div>
@@ -232,14 +232,14 @@ export function ProjectDetailContent({ project }: ProjectDetailContentProps) {
                   <motion.div key={index} variants={staggerItem}>
                     <GlassCard className="p-6 h-full">
                       <div className="flex items-start gap-4">
-                        <div className="w-12 h-12 shrink-0 rounded-xl bg-gradient-to-br from-indigo-100 to-violet-100 dark:from-indigo-900/30 dark:to-violet-900/30 flex items-center justify-center">
-                          <Icon className="w-6 h-6 text-indigo-600 dark:text-indigo-400" />
+                        <div className="w-12 h-12 shrink-0 rounded-xl bg-emerald-900/30 flex items-center justify-center">
+                          <Icon className="w-6 h-6 text-emerald-400" />
                         </div>
                         <div>
-                          <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">
+                          <h3 className="text-lg font-semibold text-[var(--ai-text-primary)] mb-2">
                             {useCase.title}
                           </h3>
-                          <p className="text-slate-600 dark:text-slate-400">
+                          <p className="text-[var(--ai-text-secondary)]">
                             {useCase.description}
                           </p>
                         </div>
@@ -264,10 +264,10 @@ export function ProjectDetailContent({ project }: ProjectDetailContentProps) {
               variants={staggerItem}
               className="flex items-center gap-3 mb-6"
             >
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-violet-100 to-purple-100 dark:from-violet-900/30 dark:to-purple-900/30 flex items-center justify-center">
-                <Layers className="w-6 h-6 text-violet-600 dark:text-violet-400" />
+              <div className="w-12 h-12 rounded-xl bg-emerald-900/30 flex items-center justify-center">
+                <Layers className="w-6 h-6 text-emerald-400" />
               </div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">
+              <h2 className="text-2xl sm:text-3xl font-bold text-[var(--ai-text-primary)]">
                 Tech Stack
               </h2>
             </motion.div>
@@ -275,21 +275,21 @@ export function ProjectDetailContent({ project }: ProjectDetailContentProps) {
               {project.techCategories.map((category, index) => (
                 <motion.div key={index} variants={staggerItem}>
                   <GlassCard className="p-6 h-full" hover={false}>
-                    <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-3">
+                    <h3 className="text-lg font-semibold text-[var(--ai-text-primary)] mb-3">
                       {category.name}
                     </h3>
                     <div className="flex flex-wrap gap-2 mb-3">
                       {category.items.map((tech) => (
                         <span
                           key={tech}
-                          className="px-3 py-1.5 text-sm font-medium rounded-full bg-gradient-to-r from-slate-200/50 to-slate-300/50 dark:from-slate-700/50 dark:to-slate-600/50 text-slate-700 dark:text-slate-300 border border-slate-300/50 dark:border-slate-600/50"
+                          className="px-3 py-1.5 text-sm font-medium rounded-full bg-[var(--ai-bg-primary)] text-[var(--ai-text-muted)] border border-[var(--ai-border)]"
                         >
                           {tech}
                         </span>
                       ))}
                     </div>
                     {category.description && (
-                      <p className="text-sm text-slate-500 dark:text-slate-400">
+                      <p className="text-sm text-[var(--ai-text-muted)]">
                         {category.description}
                       </p>
                     )}
@@ -309,10 +309,10 @@ export function ProjectDetailContent({ project }: ProjectDetailContentProps) {
             variants={fadeInUp}
           >
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-100 to-cyan-100 dark:from-blue-900/30 dark:to-cyan-900/30 flex items-center justify-center">
-                <Layers className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+              <div className="w-12 h-12 rounded-xl bg-emerald-900/30 flex items-center justify-center">
+                <Layers className="w-6 h-6 text-emerald-400" />
               </div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">
+              <h2 className="text-2xl sm:text-3xl font-bold text-[var(--ai-text-primary)]">
                 Architecture
               </h2>
             </div>
@@ -324,13 +324,13 @@ export function ProjectDetailContent({ project }: ProjectDetailContentProps) {
                   return (
                     <p
                       key={i}
-                      className="text-slate-600 dark:text-slate-300 mb-2 last:mb-0"
+                      className="text-[var(--ai-text-secondary)] mb-2 last:mb-0"
                     >
                       {parts.map((part, j) =>
                         j % 2 === 1 ? (
                           <strong
                             key={j}
-                            className="text-slate-900 dark:text-white font-semibold"
+                            className="text-[var(--ai-text-primary)] font-semibold"
                           >
                             {part}
                           </strong>
@@ -358,10 +358,10 @@ export function ProjectDetailContent({ project }: ProjectDetailContentProps) {
               variants={staggerItem}
               className="flex items-center gap-3 mb-6"
             >
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-rose-100 to-pink-100 dark:from-rose-900/30 dark:to-pink-900/30 flex items-center justify-center">
-                <BarChart3 className="w-6 h-6 text-rose-600 dark:text-rose-400" />
+              <div className="w-12 h-12 rounded-xl bg-emerald-900/30 flex items-center justify-center">
+                <BarChart3 className="w-6 h-6 text-emerald-400" />
               </div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">
+              <h2 className="text-2xl sm:text-3xl font-bold text-[var(--ai-text-primary)]">
                 Results
               </h2>
             </motion.div>
@@ -369,10 +369,10 @@ export function ProjectDetailContent({ project }: ProjectDetailContentProps) {
               {project.metrics.map((metric, index) => (
                 <motion.div key={index} variants={staggerItem}>
                   <GlassCard className="p-6 text-center">
-                    <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-slate-800 to-indigo-600 bg-clip-text text-transparent mb-2">
+                    <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-emerald-400 to-emerald-300 bg-clip-text text-transparent mb-2">
                       {metric.value}
                     </div>
-                    <div className="text-sm text-slate-600 dark:text-slate-400">
+                    <div className="text-sm text-[var(--ai-text-muted)]">
                       {metric.label}
                     </div>
                   </GlassCard>
@@ -391,10 +391,10 @@ export function ProjectDetailContent({ project }: ProjectDetailContentProps) {
             variants={fadeInUp}
           >
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-100 to-violet-100 dark:from-indigo-900/30 dark:to-violet-900/30 flex items-center justify-center">
-                <Sparkles className="w-6 h-6 text-indigo-600 dark:text-indigo-400" />
+              <div className="w-12 h-12 rounded-xl bg-emerald-900/30 flex items-center justify-center">
+                <Sparkles className="w-6 h-6 text-emerald-400" />
               </div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">
+              <h2 className="text-2xl sm:text-3xl font-bold text-[var(--ai-text-primary)]">
                 Key Features
               </h2>
             </div>
@@ -403,9 +403,9 @@ export function ProjectDetailContent({ project }: ProjectDetailContentProps) {
                 {project.highlights.map((highlight, index) => (
                   <li
                     key={index}
-                    className="flex items-start gap-4 text-slate-600 dark:text-slate-300"
+                    className="flex items-start gap-4 text-[var(--ai-text-secondary)]"
                   >
-                    <span className="w-6 h-6 shrink-0 rounded-full bg-gradient-to-r from-slate-700 to-indigo-600 flex items-center justify-center text-white text-sm font-medium">
+                    <span className="w-6 h-6 shrink-0 rounded-full bg-emerald-500 flex items-center justify-center text-white text-sm font-medium">
                       {index + 1}
                     </span>
                     <span className="pt-0.5">{highlight}</span>
@@ -425,10 +425,10 @@ export function ProjectDetailContent({ project }: ProjectDetailContentProps) {
           className="text-center"
         >
           <GlassCard className="p-12" hover={false}>
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mb-4">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[var(--ai-text-primary)] mb-4">
               Interested in this project?
             </h2>
-            <p className="text-slate-600 dark:text-slate-400 mb-8 max-w-xl mx-auto">
+            <p className="text-[var(--ai-text-secondary)] mb-8 max-w-xl mx-auto">
               Check out the source code, try the demo, or get in touch to
               discuss how similar solutions could help your team.
             </p>

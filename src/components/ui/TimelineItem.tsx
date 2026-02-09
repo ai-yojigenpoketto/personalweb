@@ -22,11 +22,11 @@ export function TimelineItem({ experience, index, isLast }: TimelineItemProps) {
     >
       {/* Connector Line */}
       {!isLast && (
-        <div className="absolute left-[11px] top-8 bottom-0 w-0.5 bg-gradient-to-b from-indigo-500 to-slate-400" />
+        <div className="absolute left-[11px] top-8 bottom-0 w-0.5 bg-gradient-to-b from-emerald-500 to-[var(--ai-border)]" />
       )}
 
       {/* Dot */}
-      <div className="absolute left-0 top-1 w-6 h-6 rounded-full bg-gradient-to-r from-slate-700 to-indigo-600 flex items-center justify-center">
+      <div className="absolute left-0 top-1 w-6 h-6 rounded-full bg-emerald-500 flex items-center justify-center">
         <div className="w-2 h-2 rounded-full bg-white" />
       </div>
 
@@ -34,23 +34,23 @@ export function TimelineItem({ experience, index, isLast }: TimelineItemProps) {
       <div
         className={cn(
           "rounded-xl p-6",
-          "bg-white/80 dark:bg-slate-800/50",
-          "border border-slate-200/50 dark:border-slate-700/50",
-          "shadow-lg backdrop-blur-sm"
+          "bg-[var(--ai-bg-card)]",
+          "border border-[var(--ai-border)]",
+          "shadow-lg"
         )}
       >
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
           <div>
-            <h3 className="text-lg font-semibold text-slate-900 dark:text-white">
+            <h3 className="text-lg font-semibold text-[var(--ai-text-primary)]">
               {experience.role}
             </h3>
-            <div className="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400">
+            <div className="flex items-center gap-2 text-sm text-[var(--ai-text-secondary)]">
               <Building2 size={14} />
               <span>{experience.company}</span>
             </div>
           </div>
-          <div className="flex flex-col sm:items-end gap-1 text-sm text-slate-500 dark:text-slate-400">
+          <div className="flex flex-col sm:items-end gap-1 text-sm text-[var(--ai-text-muted)]">
             <div className="flex items-center gap-1">
               <Calendar size={14} />
               <span>{experience.period}</span>
@@ -63,7 +63,7 @@ export function TimelineItem({ experience, index, isLast }: TimelineItemProps) {
         </div>
 
         {/* Description */}
-        <p className="text-slate-600 dark:text-slate-300 text-sm mb-4">
+        <p className="text-[var(--ai-text-secondary)] text-sm mb-4">
           {experience.description}
         </p>
 
@@ -72,9 +72,9 @@ export function TimelineItem({ experience, index, isLast }: TimelineItemProps) {
           {experience.achievements.map((achievement, i) => (
             <li
               key={i}
-              className="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-300"
+              className="flex items-start gap-2 text-sm text-[var(--ai-text-secondary)]"
             >
-              <span className="text-slate-500 mt-1">-</span>
+              <span className="text-emerald-500 mt-1">-</span>
               <span>{achievement}</span>
             </li>
           ))}
@@ -82,11 +82,11 @@ export function TimelineItem({ experience, index, isLast }: TimelineItemProps) {
 
         {/* Technologies */}
         {experience.technologies && (
-          <div className="flex flex-wrap gap-2 pt-4 border-t border-slate-200 dark:border-slate-700">
+          <div className="flex flex-wrap gap-2 pt-4 border-t border-[var(--ai-border)]">
             {experience.technologies.map((tech) => (
               <span
                 key={tech}
-                className="px-2 py-1 text-xs font-medium rounded-md bg-slate-100 dark:bg-slate-700/50 text-slate-600 dark:text-slate-300"
+                className="px-2 py-1 text-xs font-medium rounded-md bg-[var(--ai-bg-primary)] text-[var(--ai-text-muted)]"
               >
                 {tech}
               </span>

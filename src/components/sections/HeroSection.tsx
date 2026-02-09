@@ -18,7 +18,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-lg text-slate-600 dark:text-slate-400 mb-4"
+          className="text-lg text-[var(--ai-text-secondary)] mb-4"
         >
           Hi, I&apos;m
         </motion.p>
@@ -28,7 +28,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="text-5xl sm:text-6xl md:text-7xl font-bold mb-6"
+          className="text-5xl sm:text-6xl md:text-7xl font-bold mb-6 font-[var(--font-fira-code)]"
         >
           <GradientText>{PROFILE.name}</GradientText>
         </motion.h1>
@@ -38,7 +38,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-xl sm:text-2xl text-slate-700 dark:text-slate-300 mb-4"
+          className="text-xl sm:text-2xl text-[var(--ai-text-secondary)] mb-4"
         >
           {PROFILE.title}
         </motion.h2>
@@ -48,7 +48,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="text-lg text-slate-600 dark:text-slate-400 mb-8 max-w-2xl mx-auto"
+          className="text-lg text-[var(--ai-text-muted)] mb-8 max-w-2xl mx-auto"
         >
           {PROFILE.tagline}
         </motion.p>
@@ -90,7 +90,7 @@ export function HeroSection() {
             href="#about"
             animate={{ y: [0, 8, 0] }}
             transition={{ duration: 1.5, repeat: Infinity }}
-            className="flex flex-col items-center text-slate-400 hover:text-slate-600 dark:hover:text-slate-300 transition-colors"
+            className="flex flex-col items-center text-[var(--ai-text-muted)] hover:text-emerald-400 transition-colors"
           >
             <span className="text-sm mb-2">Scroll</span>
             <ArrowDown size={20} />

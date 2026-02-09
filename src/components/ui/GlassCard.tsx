@@ -14,14 +14,13 @@ export const GlassCard = forwardRef<HTMLDivElement, GlassCardProps>(
         ref={ref}
         className={cn(
           "relative rounded-2xl",
-          "bg-white/80 dark:bg-slate-800/50",
-          "backdrop-blur-lg",
-          "border border-slate-200/50 dark:border-slate-700/50",
+          "bg-[var(--ai-bg-card)]",
+          "border border-[var(--ai-border)]",
           "shadow-lg",
           hover && [
             "transition-all duration-300",
-            "hover:shadow-xl hover:shadow-indigo-500/10",
-            "hover:border-indigo-300/30 dark:hover:border-indigo-500/30",
+            "hover:shadow-xl hover:shadow-emerald-500/10",
+            "hover:border-emerald-500/30",
             "hover:-translate-y-1",
           ],
           className

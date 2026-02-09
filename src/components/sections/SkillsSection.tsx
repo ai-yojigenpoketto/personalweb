@@ -18,7 +18,7 @@ export function SkillsSection() {
           <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4">
             Skills & <GradientText>Expertise</GradientText>
           </h2>
-          <p className="text-slate-600 dark:text-slate-400 text-center mb-12 max-w-2xl mx-auto">
+          <p className="text-[var(--ai-text-secondary)] text-center mb-12 max-w-2xl mx-auto">
             Technologies and methodologies I work with daily
           </p>
         </FadeIn>
@@ -33,7 +33,7 @@ export function SkillsSection() {
               transition={{ duration: 0.5, delay: categoryIndex * 0.1 }}
               className="space-y-4"
             >
-              <h3 className="text-lg font-semibold text-slate-900 dark:text-white">
+              <h3 className="text-lg font-semibold text-[var(--ai-text-primary)]">
                 {category}
               </h3>
               <div className="flex flex-wrap gap-2">
