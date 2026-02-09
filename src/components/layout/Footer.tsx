@@ -11,7 +11,7 @@ const socialLinks = [
   },
   {
     name: "LinkedIn",
-    url: "https://linkedin.com/in/lei-zhou-phd",
+    url: "https://www.linkedin.com/in/lei-zhou",
     icon: Linkedin,
   },
   {
