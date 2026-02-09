@@ -1,11 +1,37 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Sun, Moon } from "lucide-react";
 import { NAV_ITEMS } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import { useThemeContext } from "./ThemeProvider";
+
+function NavLink({
+  href,
+  className,
+  onClick,
+  children,
+}: {
+  href: string;
+  className?: string;
+  onClick?: () => void;
+  children: React.ReactNode;
+}) {
+  if (href.startsWith("/") && !href.startsWith("/#")) {
+    return (
+      <Link href={href} className={className} onClick={onClick}>
+        {children}
+      </Link>
+    );
+  }
+  return (
+    <a href={href} className={className} onClick={onClick}>
+      {children}
+    </a>
+  );
+}
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -34,7 +60,7 @@ export function Header() {
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-1">
             {NAV_ITEMS.map((item) => (
-              <a
+              <NavLink
                 key={item.href}
                 href={item.href}
                 className={cn(
@@ -44,7 +70,7 @@ export function Header() {
                 )}
               >
                 {item.label}
-              </a>
+              </NavLink>
             ))}
           </div>
 
@@ -87,7 +113,7 @@ export function Header() {
             >
               <div className="px-4 pb-4 pt-2 space-y-1">
                 {NAV_ITEMS.map((item) => (
-                  <a
+                  <NavLink
                     key={item.href}
                     href={item.href}
                     onClick={() => setIsMenuOpen(false)}
@@ -98,7 +124,7 @@ export function Header() {
                     )}
                   >
                     {item.label}
-                  </a>
+                  </NavLink>
                 ))}
               </div>
             </motion.div>

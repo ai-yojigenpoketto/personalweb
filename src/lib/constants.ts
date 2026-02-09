@@ -1,11 +1,12 @@
 import { NavItem, SocialLink } from "./types";
 
 export const NAV_ITEMS: NavItem[] = [
-  { label: "About", href: "#about" },
-  { label: "Projects", href: "#projects" },
-  { label: "Skills", href: "#skills" },
-  { label: "Experience", href: "#experience" },
-  { label: "Contact", href: "#contact" },
+  { label: "About", href: "/#about" },
+  { label: "Projects", href: "/#projects" },
+  { label: "Skills", href: "/#skills" },
+  { label: "Experience", href: "/#experience" },
+  { label: "Contact", href: "/#contact" },
+  { label: "AI Lab", href: "/ai-projects" },
 ];
 
 export const SOCIAL_LINKS: SocialLink[] = [
